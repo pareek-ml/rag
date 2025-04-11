@@ -1,0 +1,10 @@
+accelerate
+datasets
+peft
+wandb
+torch
+fire
+langchain
+langchain-community
+sentence-transformers
+transformers
