@@ -1,0 +1,8 @@
+# Ignore all files starting with .env
+.env*
+
+# Ignore all files ending with .csv
+*.csv
+
+# Ignore __pycache__ directories
+__pycache__/

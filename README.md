@@ -2,8 +2,7 @@
 
 Follow these steps to set up the development environment:
 
-1. **Install Anaconda or Miniconda**
-   If you don't already have Anaconda or Miniconda installed, download and install it from [here](https://www.anaconda.com/products/distribution).
+1. **Install Anaconda**
 
 2. **Create a Conda Environment**
    Run the following command to create a new Conda environment named `dev` with Python 3.12.6:

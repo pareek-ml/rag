@@ -1,4 +1,6 @@
 accelerate
+bitsandbytes
+trl
 datasets
 peft
 wandb
