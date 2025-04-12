@@ -28,7 +28,7 @@ class alpaca_dataset:
 @dataclass
 class custom_dataset:
     dataset: str = "lamini/text_to_sql_finetune"
-    file: str = "src/datasets/text_to_sql_dataset.py:get_custom_dataset"
+    file: str = "datasets/text_to_sql_dataset.py:get_custom_dataset"
     train_split: str = "train"
     test_split: str = "train"
 

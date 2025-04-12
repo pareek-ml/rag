@@ -3,7 +3,7 @@ from pathlib import Path
 
 @dataclass
 class train_config:
-    model_name: str = str(Path().resolve() / "models/base")
+    model_name: str = str(Path().resolve() / "../../models/base/Llama-3.2-3B-Instruct")
     tokenizer_name: str = None
     enable_fsdp: bool = (
         False  # shards model parameters, optimizer states and gradients across DDP ranks
@@ -14,11 +14,11 @@ class train_config:
     run_validation: bool = True
     batch_size_training: int = 4
     batching_strategy: str = "packing"  # alternative: padding
-    context_length: int = 4096
+    context_length: int = 2048
     gradient_accumulation_steps: int = 1
     gradient_clipping: bool = False
     gradient_clipping_threshold: float = 1.0
-    num_epochs: int = 3
+    num_epochs: int = 5
     max_train_step: int = 0
     max_eval_step: int = 0
     num_workers_dataloader: int = 1
@@ -47,8 +47,8 @@ class train_config:
     freeze_LLM_only: bool = (
         False  # Freeze self-attention layers in the language_model. Vision model, multi_modal_projector, cross-attention will be fine-tuned
     )
-    quantization: str = None
-    one_gpu: bool = False
+    quantization: str = "4bit"
+    one_gpu: bool = True
     save_model: bool = True
     dist_checkpoint_root_folder: str = (
         str(Path().resolve() / "models/fsdp")  # will be used if using FSDP

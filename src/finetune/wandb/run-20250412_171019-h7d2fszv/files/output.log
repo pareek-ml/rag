@@ -1,0 +1,38 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 31.19it/s]
+--> Model /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct
+
+--> /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct has 3212.749824 Million params
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+
+trainable params: 2,293,760 || all params: 3,215,043,584 || trainable%: 0.0713
+README.md: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 586/586 [00:00<00:00, 2.51MB/s]
+(…)-00000-of-00001-8a9aa6c5fc4a1f00.parquet: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 3.69M/3.69M [00:00<00:00, 125MB/s]
+(…)-00000-of-00001-5df4da5825ade20f.parquet: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 118k/118k [00:00<00:00, 169MB/s]
+Generating train split: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 16428/16428 [00:00<00:00, 180480.03 examples/s]
+Generating test split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1034/1034 [00:00<00:00, 175640.30 examples/s]
+--> Training Set Length = 16428
+--> Validation Set Length = 16428
+Preprocessing dataset:   0%|                                                                                                                                   | 0/16428 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 427, in <module>
+    fire.Fire(main)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 337, in main
+    dataset_train = ConcatDataset(
+                    ^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/data/concatenator.py", line 23, in __init__
+    for sample in tqdm(self.dataset, desc="Preprocessing dataset", dynamic_ncols=True):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/teamspace/studios/this_studio/rag/src/finetune/datasets_module/text_to_sql_dataset.py", line 33, in __getitem__
+    schema, question = ann["input"].split(" -- -- ", 1)
+    ^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)

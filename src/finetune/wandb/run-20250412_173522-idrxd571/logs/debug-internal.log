@@ -1,0 +1,15 @@
+{"time":"2025-04-12T17:35:22.014366979Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/teamspace/studios/this_studio/rag/src/finetune/wandb/run-20250412_173522-idrxd571/logs/debug-core.log"}
+{"time":"2025-04-12T17:35:22.172803997Z","level":"INFO","msg":"created new stream","id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.172858489Z","level":"INFO","msg":"stream: started","id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.172874129Z","level":"INFO","msg":"writer: Do: started","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.17290841Z","level":"INFO","msg":"handler: started","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.172956042Z","level":"INFO","msg":"sender: started","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.266191151Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-12T17:35:22.493741494Z","level":"INFO","msg":"stream: closing","id":"idrxd571"}
+{"time":"2025-04-12T17:35:22.493778865Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-12T17:35:22.493837637Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-12T17:35:23.029214799Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-12T17:35:23.137848821Z","level":"INFO","msg":"handler: closed","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:23.137906823Z","level":"INFO","msg":"writer: Close: closed","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:23.137940474Z","level":"INFO","msg":"sender: closed","stream_id":"idrxd571"}
+{"time":"2025-04-12T17:35:23.138229325Z","level":"INFO","msg":"stream: closed","id":"idrxd571"}

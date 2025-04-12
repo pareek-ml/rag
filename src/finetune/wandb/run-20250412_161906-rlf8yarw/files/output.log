@@ -1,0 +1,25 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 89.66it/s]
+--> Model /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct
+
+--> /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct has 3212.749824 Million params
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+
+trainable params: 2,293,760 || all params: 3,215,043,584 || trainable%: 0.0713
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 427, in <module>
+    fire.Fire(main)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 317, in main
+    dataset_train = get_preprocessed_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/utils/dataset_utils.py", line 15, in get_preprocessed_dataset
+    raise NotImplementedError(f"{dataset_config.dataset} is not (yet) implemented")
+NotImplementedError: lamini/text_to_sql_finetune is not (yet) implemented

@@ -1,0 +1,41 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 85.37it/s]
+--> Model /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct
+
+--> /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct has 3212.749824 Million params
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+
+trainable params: 2,293,760 || all params: 3,215,043,584 || trainable%: 0.0713
+--> Training Set Length = 16428
+--> Validation Set Length = 16428
+Preprocessing dataset:   0%|                                                                                                                                   | 0/16428 [00:00<?, ?it/s]
+
+⚠️ Failed to split input at index: 0
+Input string: -- Database schema
+| department : Department_ID [ INT ] primary_key , Name [ TEXT ] , Creation [ TEXT ] , Ranking [ INT ] , Budget_in_Billions [ INT ] , Num_Employees [ INT ] | head : head_ID [ INT ] primary_key , name [ TEXT ] , born_state [ TEXT ] , age [ INT ] | management : department_ID [ INT ] primary_key management.department_ID = department.Department_ID , head_ID [ INT ] management.head_ID = head.head_ID , temporary_acting [ TEXT ] |
+-- -- How many heads of the departments are older than 56 ?
+
+Raw bytes of input: [45, 45, 32, 68, 97, 116, 97, 98, 97, 115, 101, 32, 115, 99, 104, 101, 109, 97, 10, 124, 32, 100, 101, 112, 97, 114, 116, 109, 101, 110, 116, 32, 58, 32, 68, 101, 112, 97, 114, 116, 109, 101, 110, 116, 95, 73, 68, 32, 91, 32, 73, 78, 84, 32, 93, 32, 112, 114, 105, 109, 97, 114, 121, 95, 107, 101, 121, 32, 44, 32, 78, 97, 109, 101, 32, 91, 32, 84, 69, 88, 84, 32, 93, 32, 44, 32, 67, 114, 101, 97, 116, 105, 111, 110, 32, 91, 32, 84, 69, 88, 84, 32, 93, 32, 44, 32, 82, 97, 110, 107, 105, 110, 103, 32, 91, 32, 73, 78, 84, 32, 93, 32, 44, 32, 66, 117, 100, 103, 101, 116, 95, 105, 110, 95, 66, 105, 108, 108, 105, 111, 110, 115, 32, 91, 32, 73, 78, 84, 32, 93, 32, 44, 32, 78, 117, 109, 95, 69, 109, 112, 108, 111, 121, 101, 101, 115, 32, 91, 32, 73, 78, 84, 32, 93, 32, 124, 32, 104, 101, 97, 100, 32, 58, 32, 104, 101, 97, 100, 95, 73, 68, 32, 91, 32, 73, 78, 84, 32, 93, 32, 112, 114, 105, 109, 97, 114, 121, 95, 107, 101, 121, 32, 44, 32, 110, 97, 109, 101, 32, 91, 32, 84, 69, 88, 84, 32, 93, 32, 44, 32, 98, 111, 114, 110, 95, 115, 116, 97, 116, 101, 32, 91, 32, 84, 69, 88, 84, 32, 93, 32, 44, 32, 97, 103, 101, 32, 91, 32, 73, 78, 84, 32, 93, 32, 124, 32, 109, 97, 110, 97, 103, 101, 109, 101, 110, 116, 32, 58, 32, 100, 101, 112, 97, 114, 116, 109, 101, 110, 116, 95, 73, 68, 32, 91, 32, 73, 78, 84, 32, 93, 32, 112, 114, 105, 109, 97, 114, 121, 95, 107, 101, 121, 32, 109, 97, 110, 97, 103, 101, 109, 101, 110, 116, 46, 100, 101, 112, 97, 114, 116, 109, 101, 110, 116, 95, 73, 68, 32, 61, 32, 100, 101, 112, 97, 114, 116, 109, 101, 110, 116, 46, 68, 101, 112, 97, 114, 116, 109, 101, 110, 116, 95, 73, 68, 32, 44, 32, 104, 101, 97, 100, 95, 73, 68, 32, 91, 32, 73, 78, 84, 32, 93, 32, 109, 97, 110, 97, 103, 101, 109, 101, 110, 116, 46, 104, 101, 97, 100, 95, 73, 68, 32, 61, 32, 104, 101, 97, 100, 46, 104, 101, 97, 100, 95, 73, 68, 32, 44, 32, 116, 101, 109, 112, 111, 114, 97, 114, 121, 95, 97, 99, 116, 105, 110, 103, 32, 91, 32, 84, 69, 88, 84, 32, 93, 32, 124, 10, 45, 45, 32, 45, 45, 32, 72, 111, 119, 32, 109, 97, 110, 121, 32, 104, 101, 97, 100, 115, 32, 111, 102, 32, 116, 104, 101, 32, 100, 101, 112, 97, 114, 116, 109, 101, 110, 116, 115, 32, 97, 114, 101, 32, 111, 108, 100, 101, 114, 32, 116, 104, 97, 110, 32, 53, 54, 32, 63, 10]
+Index of '-- --': -1
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 427, in <module>
+    fire.Fire(main)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 337, in main
+    dataset_train = ConcatDataset(
+                    ^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/data/concatenator.py", line 23, in __init__
+    for sample in tqdm(self.dataset, desc="Preprocessing dataset", dynamic_ncols=True):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/teamspace/studios/this_studio/rag/src/finetune/datasets_module/text_to_sql_dataset.py", line 34, in __getitem__
+    schema, question = ann["input"].split(" -- -- ", 1)
+    ^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)

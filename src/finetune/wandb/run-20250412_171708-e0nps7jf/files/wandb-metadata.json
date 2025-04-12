@@ -1,0 +1,39 @@
+{
+  "os": "Linux-5.15.0-1081-aws-x86_64-with-glibc2.31",
+  "python": "CPython 3.12.2",
+  "startedAt": "2025-04-12T17:17:08.053417Z",
+  "args": [
+    "model_name=../../../models/base/Meta-Llama-3-8B",
+    "output_dir=../../../models/peft/llama3-sql-lora",
+    "dataset=custom_dataset",
+    "use_peft=True",
+    "run_validation=True",
+    "use_wandb=True"
+  ],
+  "program": "/teamspace/studios/this_studio/rag/src/finetune/finetune.py",
+  "codePath": "src/finetune/finetune.py",
+  "git": {
+    "remote": "https://github.com/pareek-ml/rag.git",
+    "commit": "c19b05a452802851d42c94bbac400b75acbe54f3"
+  },
+  "email": "yash.pareek@usi.ch",
+  "root": "/teamspace/studios/this_studio/rag/src/finetune",
+  "host": "ip-10-192-11-101",
+  "executable": "/home/zeus/miniconda3/envs/cloudspace/bin/python",
+  "codePathLocal": "finetune.py",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "416055988224",
+      "used": "85529567232"
+    }
+  },
+  "memory": {
+    "total": "16468410368"
+  },
+  "cpu": {
+    "count": 2,
+    "countLogical": 4
+  }
+}

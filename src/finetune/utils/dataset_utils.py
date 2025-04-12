@@ -4,7 +4,7 @@
 import torch
 
 from data.concatenator import ConcatDataset
-from datasets import DATASET_PREPROC, DATALOADER_COLLATE_FUNC
+from datasets_module import DATASET_PREPROC, DATALOADER_COLLATE_FUNC
 from utils.config_utils import get_dataloader_kwargs
 
 

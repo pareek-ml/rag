@@ -1,0 +1,38 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 90.30it/s]
+--> Model /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct
+
+--> /teamspace/studios/this_studio/rag/src/finetune/../../models/base/Llama-3.2-3B-Instruct has 3212.749824 Million params
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+
+trainable params: 2,293,760 || all params: 3,215,043,584 || trainable%: 0.0713
+--> Training Set Length = 16428
+--> Validation Set Length = 16428
+Preprocessing dataset:   0%|                                                                                                                                   | 0/16428 [00:00<?, ?it/s]
+
+⚠️ Failed to split input at index: 0
+Input string: -- Database schema
+| department : Department_ID [ INT ] primary_key , Name [ TEXT ] , Creation [ TEXT ] , Ranking [ INT ] , Budget_in_Billions [ INT ] , Num_Employees [ INT ] | head : head_ID [ INT ] primary_key , name [ TEXT ] , born_state [ TEXT ] , age [ INT ] | management : department_ID [ INT ] primary_key management.department_ID = department.Department_ID , head_ID [ INT ] management.head_ID = head.head_ID , temporary_acting [ TEXT ] |
+-- -- How many heads of the departments are older than 56 ?
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 427, in <module>
+    fire.Fire(main)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/finetune.py", line 337, in main
+    dataset_train = ConcatDataset(
+                    ^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/rag/src/finetune/data/concatenator.py", line 23, in __init__
+    for sample in tqdm(self.dataset, desc="Preprocessing dataset", dynamic_ncols=True):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/teamspace/studios/this_studio/rag/src/finetune/datasets_module/text_to_sql_dataset.py", line 34, in __getitem__
+    schema, question = ann["input"].split(" -- -- ", 1)
+    ^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)

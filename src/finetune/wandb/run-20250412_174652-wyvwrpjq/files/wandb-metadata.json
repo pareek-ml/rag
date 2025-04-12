@@ -1,0 +1,50 @@
+{
+  "os": "Linux-5.15.0-1081-aws-x86_64-with-glibc2.31",
+  "python": "CPython 3.12.2",
+  "startedAt": "2025-04-12T17:46:52.930620Z",
+  "args": [
+    "model_name=../../../models/base/Meta-Llama-3-8B",
+    "output_dir=../../../models/peft/llama3-sql-lora",
+    "dataset=custom_dataset",
+    "use_peft=True",
+    "run_validation=True",
+    "use_wandb=True"
+  ],
+  "program": "/teamspace/studios/this_studio/rag/src/finetune/finetune.py",
+  "codePath": "src/finetune/finetune.py",
+  "git": {
+    "remote": "https://github.com/pareek-ml/rag.git",
+    "commit": "c19b05a452802851d42c94bbac400b75acbe54f3"
+  },
+  "email": "yash.pareek@usi.ch",
+  "root": "/teamspace/studios/this_studio/rag/src/finetune",
+  "host": "ip-10-192-11-50",
+  "executable": "/home/zeus/miniconda3/envs/cloudspace/bin/python",
+  "codePathLocal": "finetune.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA L40S",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "589427720192",
+      "used": "99123986432"
+    }
+  },
+  "memory": {
+    "total": "133270261760"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.2"
+}
