@@ -6,3 +6,6 @@
 
 # Ignore __pycache__ directories
 __pycache__/
+
+# Ingnore all files with .safetensors
+*.safetensors
