@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-
+from pathlib import Path
 
 @dataclass
 class train_config:
-    model_name: str = "PATH/to/Model"
+    model_name: str = str(Path().resolve() / "models/base")
     tokenizer_name: str = None
     enable_fsdp: bool = (
         False  # shards model parameters, optimizer states and gradients across DDP ranks
@@ -33,15 +33,15 @@ class train_config:
     )
     mixed_precision: bool = True
     val_batch_size: int = 1
-    dataset = "samsum_dataset"
+    dataset = "custom_dataset"
     peft_method: str = (
         "lora"  # None, llama_adapter (Caution: llama_adapter is currently not supported with FSDP)
     )
-    use_peft: bool = False  # use parameter efficient fine tuning
+    use_peft: bool = True  # use parameter efficient fine tuning
     from_peft_checkpoint: str = (
         ""  # if not empty and use_peft=True, will load the peft checkpoint and resume the fine-tuning on that checkpoint
     )
-    output_dir: str = "PATH/to/save/PEFT/model"
+    output_dir: str = str(Path().resolve() / "models/peft")
     freeze_layers: bool = False
     num_freeze_layers: int = 1
     freeze_LLM_only: bool = (
@@ -51,16 +51,16 @@ class train_config:
     one_gpu: bool = False
     save_model: bool = True
     dist_checkpoint_root_folder: str = (
-        "PATH/to/save/FSDP/model"  # will be used if using FSDP
+        str(Path().resolve() / "models/fsdp")  # will be used if using FSDP
     )
     dist_checkpoint_folder: str = "fine-tuned"  # will be used if using FSDP
     save_optimizer: bool = False  # will be used if using FSDP
     use_fast_kernels: bool = (
-        False  # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
+        True  # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
     )
-    use_wandb: bool = False  # Enable wandb for experient tracking
+    use_wandb: bool = True  # Enable wandb for experient tracking
     save_metrics: bool = (
-        False  # saves training metrics to a json file for later plotting
+        True  # saves training metrics to a json file for later plotting
     )
     flop_counter: bool = (
         False  # Enable flop counter to measure model throughput, can not be used with pytorch profiler at the same time.
