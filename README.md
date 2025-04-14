@@ -21,5 +21,17 @@ Follow these steps to set up the development environment:
    ```bash
    pip install -r requirements.txt
    ```
-
-You are now ready to start working on the project!
+5. **Run the llama server**
+   Install llama.cpp and save model to models/base/
+   cd into folder root:
+   ```bash
+   llama-server -m /Users/yash/Code/Personal/IBM/models/base/Llama-3.2-3B-Instruct-F16.gguf
+   ```
+6. **Populate chromadb**
+   ```bash
+   python src/rag/vectorstore/load_data.py
+   ```
+7. **Launch RAG**
+   ```bash
+   python src/rag/app.py
+   ```

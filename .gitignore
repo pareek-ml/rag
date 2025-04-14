@@ -7,5 +7,13 @@
 # Ignore __pycache__ directories
 __pycache__/
 
+# Ignore LLM mdodels
+*.downloadInProgress
+*.gguf
+
+# Ignore Chroma files and db
+*.bin
+*.pickle
+
 # Ingnore all files with .safetensors
 *.safetensors
