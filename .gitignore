@@ -13,6 +13,7 @@ __pycache__/
 
 # Ignore Chroma files and db
 *.bin
+*.sqlite3
 *.pickle
 
 # Ingnore all files with .safetensors

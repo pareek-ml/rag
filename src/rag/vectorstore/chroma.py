@@ -116,7 +116,7 @@ class ChromaVectorStore(IVectorstore):
                     "id": doc_id,
                     "schema": metadata.get("schema", ""),
                     "question": metadata.get("question", ""),
-                    # "sql": metadata.get("sql", ""),
+                    "sql": metadata.get("sql", ""),
                     "similarity": similarity,
                 }
             relevant_items.append(item)

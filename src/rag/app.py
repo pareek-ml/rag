@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from pydantic import BaseModel
 from typing import Optional
-from llm import get_sql_query
+from llm import get_sql_query, recognise_intent, get_other_query
 from get_context import chroma_client
 import uvicorn
 
@@ -53,11 +53,17 @@ async def root():
 async def generate_sql(request: SQLGenerationRequest):
     try:
         # Get SQL query using the LLM
-        response = get_sql_query(request.question, vector_store)
+        intent = recognise_intent(request.question)
+        if intent and intent == "specific":
+            response = get_sql_query(request.question, vector_store)
+        else:
+            response = get_other_query(request.question)
 
         # Extract SQL from response
         if "choices" in response and len(response["choices"]) > 0:
             sql = response["choices"][0]["message"]["content"]
+            # if not sql.endswith(";"):
+            #     sql += ";"
             model_name = response.get("model", "Unknown")
 
             return SQLGenerationResponse(
