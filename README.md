@@ -1,3 +1,6 @@
+# SQL RAG with Llama 3.2
+This repository contains code to set up a Retrieval-Augmented Generation (RAG) system using Llama 3.2 and a SQL database. The RAG system allows you to enhance language model responses with relevant information retrieved from a database.
+
 # Setting Up the Development Environment
 
 Follow these steps to set up the development environment:
